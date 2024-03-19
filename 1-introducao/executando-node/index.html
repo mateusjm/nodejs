@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quadrado que muda de cor</title>
+    <script>
+
+        function mudarCor(cor) {
+            document.getElementById('quadrado').style.backgroundColor = cor
+        }
+
+    </script>
+</head>
+<body>
+    <div id="quadrado" style="width: 100px; height: 100px; border: 1px solid black;" ></div>
+    <br>
+    <button onclick="mudarCor('red')">Vermelho</button>
+    <button onclick="mudarCor('blue')">Azul</button>
+    <button onclick="mudarCor('green')">Verde</button>
+</body>
+</html>
