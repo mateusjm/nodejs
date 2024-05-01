@@ -12,6 +12,8 @@ app.use(
     })
 )
 
+app.use(express.json())
+
 // configuração template engine
 app.engine('handlebars', exphbs.engine())
 app.set('view engine', 'handlebars')
@@ -23,8 +25,6 @@ app.use(express.static('public'))
 app.get('/', (req, res)=> {
     res.render('home')
 })
-
-app.use(express.json())
 
 // rota insertbooks
 app.post('/books/insertbook', (req, res)=> {
