@@ -5,7 +5,6 @@ const conn = require('./db/conn')
 
 // models
 const User = require('./models/User')
-const { where } = require('sequelize')
 
 const app = express()
 
