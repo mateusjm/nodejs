@@ -5,7 +5,7 @@ const conn = require('./db/conn')
 
 // models
 const User = require('./models/User')
-const Adress = require('./models/Adress')
+const Address = require('./models/Address')
 
 const app = express()
 
@@ -130,7 +130,7 @@ app.post('/address/create', async (req, res)=> {
         city
     }
 
-    await Adress.create(address)
+    await Address.create(address)
 
     res.redirect(`/users/edit/${UserId}`)
 
