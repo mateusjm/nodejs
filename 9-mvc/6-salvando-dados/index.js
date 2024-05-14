@@ -31,6 +31,7 @@ app.use(express.json())
 // definindo o uso de arquivos estáticos
 app.use(express.static('public'))
 
+// definindo o uso de rotas
 app.use('/tasks', tasksRoutes)
 
 // sincronização
