@@ -13,4 +13,21 @@ module.exports = class ProductController {
     static createProduct(req ,res) {
         res.render('products/create')
     }
+
+    // rota criar ProdutoPost
+
+    static async createProductPost(req, res) {
+        const name = req.body.name
+        const price = req.body.price
+        const description = req.body.description
+
+        // criando o product através da classe Product, estamos instanciando
+        const product = new Product(name, price, description)
+
+        // salvando product no db
+        product.save()
+
+        res.redirect('/products')
+
+    }
 }

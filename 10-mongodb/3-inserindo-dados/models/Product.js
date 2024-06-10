@@ -28,4 +28,5 @@ class Product {
 
 }
 
+// importando o objeto Product JS
 module.exports = Product
