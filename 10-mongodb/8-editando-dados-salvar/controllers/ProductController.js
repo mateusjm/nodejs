@@ -26,7 +26,7 @@ module.exports = class ProductController {
         const description = req.body.description
 
         // criando o product através da classe Product, estamos instanciando
-        const product = new Product(name, image, price, description)
+        const product = new Product({name, image, price, description})
 
         // salvando product no db
         product.save()
@@ -72,7 +72,7 @@ module.exports = class ProductController {
         const price = req.body.price
         const description = req.body.description
 
-        const product = new Product(name, image, price, description)
+        const product = new Product({name, image, price, description})
 
         await product.updateProduct(id)
 
